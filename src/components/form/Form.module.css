@@ -1,0 +1,39 @@
+.form {
+  padding: 0 20px;
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  padding: 0;
+}
+.input {
+  display: block;
+  max-width: 440px;
+  margin-bottom: 16px;
+  padding: 8px;
+  border: 1px solid rgba(69, 69, 241, 0.753);
+  border-radius: 4px;
+
+  &:focus-within {
+    outline: none;
+    border-color: blue;
+  }
+}
+
+.form_button {
+  padding: 12px;
+  background-color: rgba(69, 69, 241, 0.753);
+  border: 2px solid blue;
+  border-radius: 12px;
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: blue;
+    color: white;
+  }
+}

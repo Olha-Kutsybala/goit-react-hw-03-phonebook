@@ -1,0 +1,14 @@
+.title {
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.container {
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 350px;
+  padding: 20px;
+  background-color: #babcc5;
+  border-radius: 12px;
+}
