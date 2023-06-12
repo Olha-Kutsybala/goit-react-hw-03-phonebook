@@ -17,7 +17,7 @@ export class App extends Component {
   };
 
   componentDidUpdate(_, prevState) {
-    if (this.state.contacts !== prevState.contacts) {
+    if (this.state.contacts.length !== prevState.contacts.length) {
       localStorage.setItem('contacts', JSON.stringify(this.state.contacts));
     }
   }
@@ -63,6 +63,7 @@ export class App extends Component {
 
   getFilter = event => {
     this.setState({ filter: event.currentTarget.value });
+    console.log(this.state.filter);
   };
 
   getListContacts = () => {
@@ -83,7 +84,7 @@ export class App extends Component {
         <h1 className={css.title}>Phonebook</h1>
         <Form onSubmit={this.addContact}></Form>
         <h2 className={css.title}>Contacts</h2>
-        {contacts.length > 1 && (
+        {contacts.length >= 1 && (
           <Filter value={filter} onChange={this.getFilter} />
         )}
         {contacts.length > 0 ? (
